@@ -1,0 +1,11 @@
+{% if debug == True %}
+Have debug
+
+{# Test the sql_queries #}
+First query list: {{ sql_queries|length }}
+{% for obj in debug_objects.all %}
+    {{ obj }}
+{% endfor %}
+Second query list: {{ sql_queries|length }}
+
+{% endif %}
