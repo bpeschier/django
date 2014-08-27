@@ -7,5 +7,9 @@ First query list: {{ sql_queries|length }}
     {{ obj }}
 {% endfor %}
 Second query list: {{ sql_queries|length }}
+{% for obj in debug_objects.all %}
+{{ obj }}
+{% endfor %}
+Third query list: {{ sql_queries|length }}
 
 {% endif %}
